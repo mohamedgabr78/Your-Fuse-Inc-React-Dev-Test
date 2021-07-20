@@ -1,38 +1,20 @@
 const {
-  PRODUCT_LIST_REQUEST,
-  PRODUCT_LIST_SUCCESS,
-  PRODUCT_LIST_FAIL,
-  PRODUCT_DETAILS_REQUEST,
-  PRODUCT_DETAILS_SUCCESS,
-  PRODUCT_DETAILS_FAIL,
+  COIN_LIST_REQUEST,
+  COIN_LIST_SUCCESS,
+  COIN_LIST_FAIL,
 } = require("../Constants");
 
-export const productListReducer = (
-  state = { loading: false, products: [] },
+export const coinListReducer = (
+  state = { loading: true, coins: [] },
   action
 ) => {
   switch (action.type) {
-    case PRODUCT_LIST_REQUEST:
+    case COIN_LIST_REQUEST:
       return { loading: true };
-    case PRODUCT_LIST_SUCCESS:
-      return { loading: false, products: action.payload };
-    case PRODUCT_LIST_FAIL:
-      return { loading: false, error: action.payload };
-    default:
-      return state;
-  }
-};
+    case COIN_LIST_SUCCESS:
+      return { loading: false, coins: action.payload.cryptoTopSearchRanks };
 
-export const productDetailsReducer = (
-  state = { loading: true, product: {} },
-  action
-) => {
-  switch (action.type) {
-    case PRODUCT_DETAILS_REQUEST:
-      return { loading: true };
-    case PRODUCT_DETAILS_SUCCESS:
-      return { loading: false, product: action.payload };
-    case PRODUCT_DETAILS_FAIL:
+    case COIN_LIST_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;

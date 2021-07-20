@@ -1,10 +1,10 @@
 import "./styles/styles.scss";
 import Footer from "./components/Footer";
 import { useDispatch, useSelector } from "react-redux";
-import { listProducts } from "./redux/actions/Action";
+import { listCoins } from "./redux/actions/Action";
 
 function App() {
-  const loading = useSelector((state) => state.productListReducer.loading);
+  const loading = useSelector((state) => state.coinListReducer.loading);
   const dispatch = useDispatch();
 
   return (
@@ -13,7 +13,7 @@ function App() {
       loading: {`${loading}`}
       <button
         onClick={(e) => {
-          dispatch(listProducts());
+          dispatch(listCoins());
         }}
       >
         action
