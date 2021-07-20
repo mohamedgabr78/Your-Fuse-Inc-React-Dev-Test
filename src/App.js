@@ -2,15 +2,16 @@ import "./styles/styles.scss";
 import Footer from "./components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { listCoins } from "./redux/actions/Action";
+import LoadingIndicator from "./components/LoadingIndicator/LoadingIndicator";
 
 function App() {
-  const loading = useSelector((state) => state.coinListReducer.loading);
   const dispatch = useDispatch();
 
   return (
     <div className="App">
       <Footer />
-      loading: {`${loading}`}
+
+      <LoadingIndicator />
       <button
         onClick={(e) => {
           dispatch(listCoins());

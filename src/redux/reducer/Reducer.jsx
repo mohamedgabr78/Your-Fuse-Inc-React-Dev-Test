@@ -5,7 +5,7 @@ const {
 } = require("../Constants");
 
 export const coinListReducer = (
-  state = { loading: true, coins: [] },
+  state = { loading: false, coins: [] },
   action
 ) => {
   switch (action.type) {
