@@ -13,7 +13,7 @@ export const coinListReducer = (
     case COIN_LIST_REQUEST:
       return { loading: true };
     case COIN_LIST_SUCCESS:
-      return { loading: false, coins: action.payload.cryptoTopSearchRanks };
+      return { loading: false, coins: action.payload };
 
     case COIN_LIST_FAIL:
       return { loading: false, error: action.payload };
