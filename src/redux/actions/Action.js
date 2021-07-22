@@ -3,6 +3,7 @@ import {
   COIN_LIST_FAIL,
   COIN_LIST_REQUEST,
   COIN_LIST_SUCCESS,
+  LIST_VIEW,
 } from "../Constants";
 
 export const listCoins = () => async (dispatch) => {
@@ -26,4 +27,10 @@ export const listCoins = () => async (dispatch) => {
   } catch (error) {
     dispatch({ type: COIN_LIST_FAIL, payload: error.message });
   }
+};
+
+export const toggleListView = () => async (dispatch) => {
+  dispatch({
+    type: LIST_VIEW,
+  });
 };
