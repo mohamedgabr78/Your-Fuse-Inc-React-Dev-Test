@@ -4,7 +4,6 @@ import styles from "./CardView.module.scss";
 
 export default function CardView() {
   const coins = useSelector((state) => state.coinListReducer.coins || []);
-  console.log(coins);
 
   return (
     <div className={styles.container}>
@@ -15,6 +14,10 @@ export default function CardView() {
             key={index}
             coinTitle={coin.name}
             coinPrice={coin.priceChange.price}
+            volume24h={coin.priceChange.volume24h}
+            marketCap={coin.marketCap}
+            rank={coin.rank}
+            id={coin.id}
           />
         );
       })}

@@ -9,5 +9,10 @@
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: $primary-color-light;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }

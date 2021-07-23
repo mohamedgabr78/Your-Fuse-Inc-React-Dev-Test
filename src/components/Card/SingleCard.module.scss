@@ -1,9 +1,48 @@
-.card {
-  width: 50vw;
-  height: 50vh;
-  // background-color:red !important ;
-}
+@import "../../styles/templates.scss";
 
 div.card {
-  background-color: red;
+  width: 40%;
+  background-color: $primary-color-light;
+  margin: 3.5rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-inline: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: rgba($color: $divider-color, $alpha: 0.9) 0px 8px 24px,
+    rgba($color: $divider-color, $alpha: 0.9) 0px 16px 56px,
+    rgba($color: $divider-color, $alpha: 0.9) 0px 24px 80px;
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    img {
+      width: 20%;
+      margin-right: 2rem;
+    }
+  }
+  h1 {
+    color: $accent-color;
+    font-family: "Montserrat Bold";
+  }
+  li {
+    text-align: start;
+    margin-left: 2rem;
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    .label {
+      color: $secondary-text-color;
+    }
+
+    .value {
+    }
+  }
 }
