@@ -4,6 +4,8 @@ import {
   COIN_LIST_REQUEST,
   COIN_LIST_SUCCESS,
   LIST_VIEW,
+  NEXT_PAGE,
+  PREV_PAGE,
 } from "../Constants";
 
 export const listCoins = () => async (dispatch) => {
@@ -32,5 +34,17 @@ export const listCoins = () => async (dispatch) => {
 export const toggleListView = () => async (dispatch) => {
   dispatch({
     type: LIST_VIEW,
+  });
+};
+
+export const getNextPage = () => async (dispatch) => {
+  dispatch({
+    type: NEXT_PAGE,
+  });
+};
+
+export const getPrevPage = () => async (dispatch) => {
+  dispatch({
+    type: PREV_PAGE,
   });
 };
