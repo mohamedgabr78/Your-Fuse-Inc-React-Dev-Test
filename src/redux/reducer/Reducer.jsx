@@ -6,32 +6,36 @@ const {
   CARD_VIEW_LIMIT,
   NEXT_PAGE,
   PREV_PAGE,
+  LIST_VIEW_LIMIT,
 } = require("../Constants");
 
 export const coinListReducer = (
-  state = { loading: false, coins: [] },
+  state = { loading: false, coins: [], isCardView: true },
   action
 ) => {
   switch (action.type) {
     case COIN_LIST_REQUEST:
-      return { loading: true };
+      return { loading: true, ...state };
     case COIN_LIST_SUCCESS:
       const currentPage = 1;
       const count = action.payload.length;
+      const limit = state.isCardView ? CARD_VIEW_LIMIT : LIST_VIEW_LIMIT;
+
       return {
+        ...state,
         loading: false,
         coins: action.payload,
         pagination: {
           count,
           currentPage,
-          cardViewLimit: CARD_VIEW_LIMIT,
-          pageCount: Math.ceil(count / CARD_VIEW_LIMIT),
+          limit: limit,
+          pageCount: Math.ceil(count / limit),
           firstItem: 0,
         },
       };
 
     case COIN_LIST_FAIL:
-      return { loading: false, error: action.payload };
+      return { loading: false, error: action.payload, ...state };
     case NEXT_PAGE: {
       const currentPage = state.pagination.currentPage + 1;
       return {
@@ -39,7 +43,9 @@ export const coinListReducer = (
         pagination: {
           ...state.pagination,
           currentPage,
-          firstItem: state.pagination.firstItem + parseInt(CARD_VIEW_LIMIT),
+          firstItem:
+            state.pagination.firstItem +
+            parseInt(state.isCardView ? CARD_VIEW_LIMIT : LIST_VIEW_LIMIT),
         },
       };
     }
@@ -50,19 +56,26 @@ export const coinListReducer = (
         pagination: {
           ...state.pagination,
           currentPage,
-          firstItem: state.pagination.firstItem - parseInt(CARD_VIEW_LIMIT),
+          firstItem:
+            state.pagination.firstItem -
+            parseInt(state.isCardView ? CARD_VIEW_LIMIT : LIST_VIEW_LIMIT),
         },
       };
     }
-    default:
-      return state;
-  }
-};
-
-export const toggleListReducer = (state = { isCardView: true }, action) => {
-  switch (action.type) {
-    case LIST_VIEW:
-      return { isCardView: !state.isCardView };
+    case LIST_VIEW: {
+      const limit = !state.isCardView ? CARD_VIEW_LIMIT : LIST_VIEW_LIMIT;
+      return {
+        ...state,
+        isCardView: !state.isCardView,
+        pagination: {
+          ...state.pagination,
+          currentPage: 1,
+          pageCount: Math.ceil(state?.pagination?.count / limit),
+          firstItem: 0,
+          limit: limit,
+        },
+      };
+    }
     default:
       return state;
   }

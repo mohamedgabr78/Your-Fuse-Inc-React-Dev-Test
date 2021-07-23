@@ -1,0 +1,13 @@
+@import "../../../../styles/templates.scss";
+
+.container {
+  width: 90%;
+  height: 90%;
+  thead tr {
+    background-color: $accent-color;
+    th {
+      font-family: "Montserrat";
+      color: $primary-text-color;
+    }
+  }
+}

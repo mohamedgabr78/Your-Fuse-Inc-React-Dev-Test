@@ -5,15 +5,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import { renderStaticText } from "../../locale";
-
-const formatPrice = (price) => {
-  let priceString = parseFloat(price).toString();
-  return priceString.includes("e")
-    ? parseFloat(price).toFixed(
-        parseInt(priceString[priceString.length - 1]) + 2
-      )
-    : parseFloat(price).toFixed(3);
-};
+import { formatPrice } from "../../utils";
 
 export default function SingleCard(props) {
   const { coinTitle, coinPrice, marketCap, volume24h, rank, id } = props;

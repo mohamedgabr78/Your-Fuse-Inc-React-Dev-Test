@@ -1,9 +1,10 @@
 const staticText = {
   title: "Crypto Currencies",
-  coinPrice: "Coin Price: ",
-  volume: "Volume: ",
-  marketRate: "Market Cap: ",
-  rank: "Rank: ",
+  coinPrice: "Coin Price",
+  volume: "Volume",
+  marketRate: "Market Cap",
+  rank: "Rank",
+  coinTitle: "Coin Name",
 };
 
 export const renderStaticText = (key) => {

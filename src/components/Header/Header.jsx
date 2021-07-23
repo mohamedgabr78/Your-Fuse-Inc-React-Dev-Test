@@ -6,7 +6,7 @@ import { listCoins, toggleListView } from "../../redux/actions/Action";
 
 export default function Header() {
   const dispatch = useDispatch();
-  const isCardView = useSelector((state) => state.toggleListReducer.isCardView);
+  const isCardView = useSelector((state) => state.coinListReducer.isCardView);
 
   return (
     <div className={styles.container}>
