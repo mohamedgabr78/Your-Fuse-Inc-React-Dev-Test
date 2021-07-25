@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.76c88fc8.chunk.css",
-    "main.js": "/static/js/main.609f5124.chunk.js",
-    "main.js.map": "/static/js/main.609f5124.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6172f2d0.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6172f2d0.js.map",
-    "static/js/2.fa134a69.chunk.js": "/static/js/2.fa134a69.chunk.js",
-    "static/js/2.fa134a69.chunk.js.map": "/static/js/2.fa134a69.chunk.js.map",
-    "static/js/3.b3a4a2ba.chunk.js": "/static/js/3.b3a4a2ba.chunk.js",
-    "static/js/3.b3a4a2ba.chunk.js.map": "/static/js/3.b3a4a2ba.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.76c88fc8.chunk.css.map": "/static/css/main.76c88fc8.chunk.css.map",
-    "static/js/2.fa134a69.chunk.js.LICENSE.txt": "/static/js/2.fa134a69.chunk.js.LICENSE.txt",
-    "static/media/styles.scss": "/static/media/Montserrat-SemiBold.fa8441f3.ttf",
-    "static/media/loading-indicator.233e6a69.svg": "/static/media/loading-indicator.233e6a69.svg"
+    "main.css": "/Your-Fuse-Inc-React-Dev-Test/static/css/main.f2caae2a.chunk.css",
+    "main.js": "/Your-Fuse-Inc-React-Dev-Test/static/js/main.609f5124.chunk.js",
+    "main.js.map": "/Your-Fuse-Inc-React-Dev-Test/static/js/main.609f5124.chunk.js.map",
+    "runtime-main.js": "/Your-Fuse-Inc-React-Dev-Test/static/js/runtime-main.4a800bac.js",
+    "runtime-main.js.map": "/Your-Fuse-Inc-React-Dev-Test/static/js/runtime-main.4a800bac.js.map",
+    "static/js/2.fa134a69.chunk.js": "/Your-Fuse-Inc-React-Dev-Test/static/js/2.fa134a69.chunk.js",
+    "static/js/2.fa134a69.chunk.js.map": "/Your-Fuse-Inc-React-Dev-Test/static/js/2.fa134a69.chunk.js.map",
+    "static/js/3.b3a4a2ba.chunk.js": "/Your-Fuse-Inc-React-Dev-Test/static/js/3.b3a4a2ba.chunk.js",
+    "static/js/3.b3a4a2ba.chunk.js.map": "/Your-Fuse-Inc-React-Dev-Test/static/js/3.b3a4a2ba.chunk.js.map",
+    "index.html": "/Your-Fuse-Inc-React-Dev-Test/index.html",
+    "static/css/main.f2caae2a.chunk.css.map": "/Your-Fuse-Inc-React-Dev-Test/static/css/main.f2caae2a.chunk.css.map",
+    "static/js/2.fa134a69.chunk.js.LICENSE.txt": "/Your-Fuse-Inc-React-Dev-Test/static/js/2.fa134a69.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/Your-Fuse-Inc-React-Dev-Test/static/media/Montserrat-SemiBold.fa8441f3.ttf",
+    "static/media/loading-indicator.233e6a69.svg": "/Your-Fuse-Inc-React-Dev-Test/static/media/loading-indicator.233e6a69.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6172f2d0.js",
+    "static/js/runtime-main.4a800bac.js",
     "static/js/2.fa134a69.chunk.js",
-    "static/css/main.76c88fc8.chunk.css",
+    "static/css/main.f2caae2a.chunk.css",
     "static/js/main.609f5124.chunk.js"
   ]
 }
