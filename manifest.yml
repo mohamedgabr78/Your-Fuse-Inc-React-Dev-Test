@@ -1,0 +1,6 @@
+applications:
+  - name: crypto-observer
+path: build/
+buildpack: staticfile_buildpack
+routes:
+  - route: crypto-observer.eu-gb.cf.appdomain.cloud

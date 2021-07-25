@@ -13,7 +13,6 @@ export default function CardView() {
   return (
     <div className={styles.container}>
       {[...coins].slice(firstItem, currentPage * limit).map((coin, index) => {
-        console.log(coin);
         return (
           <SingleCard
             key={index}
